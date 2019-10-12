@@ -1,0 +1,6 @@
+.blue, .boldblue{
+  color: BLUE;
+}
+.bold, .boldblue{
+  border-width:20;
+}
