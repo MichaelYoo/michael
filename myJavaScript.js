@@ -1,6 +1,3 @@
-$(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
-});
 $(document).ready(function(){
 
   // $("html").css("overflowY", "hidden");
@@ -8,7 +5,8 @@ $(document).ready(function(){
   // var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
   $("html").css("scroll-behavior", "auto");
-  $(document).scrollTop(0);
+  //$(document).scrollTop(0);
+  $("html,body").animate({scrollTop: 0}, 100);
   var aboutMe = Snap("#aboutMe");
   var sinText = Snap("#sinText");
   var s = Snap("#continue_Button");
