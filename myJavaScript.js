@@ -6,7 +6,7 @@ $(document).ready(function(){
 
   $("html").css("scroll-behavior", "auto");
   //$(document).scrollTop(0);
-  $("html,body").animate({scrollTop: 0}, 100);
+  $("html,body").animate({scrollTop: 0}, 1);
   var aboutMe = Snap("#aboutMe");
   var sinText = Snap("#sinText");
   var s = Snap("#continue_Button");
