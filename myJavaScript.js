@@ -178,17 +178,17 @@ $(document).ready(function(){
 
 
   var font_settings = "<style type='text/css'> \n"+
-      "@font-face {font-family: Squad; src: url('../fonts/Squad/Squad-Regular.otf');} \n" +
-      "@font-face {font-family: Baron; src: url('../fonts/Baron/BaronNeue-Regular.otf');} \n" +
-      "@font-face {font-family: Bukhari; src: url('../fonts/Bukhari/BukhariScript-Regular.otf');} \n" +
-      "@font-face {font-family: ColorTube; src: url('../fonts/ColorTube/ColorTube-Regular.otf');} \n" +
-      "@font-face {font-family: BloggerMediumItalic; src: url('../fonts/Blogger/Blogger Sans-Medium Italic.otf');} \n" +
-      "@font-face {font-family: BloggerBoldItalic; src: url('../fonts/Blogger/Blogger Sans-Bold Italic.otf');} \n" +
-      "@font-face {font-family: Phenomena; src: url('../fonts/Phenomena/Phenomena-Regular.otf');} \n" +
-      "@font-face {font-family: Manrope-Regular; src: url('../fonts/Manrope/manrope-regular.otf');} \n" +
-      "@font-face {font-family: Manrope-Bold; src: url('../fonts/Manrope/manrope-bold.otf');} \n" +
-      "@font-face {font-family: Ginga; src: url('../fonts/Ginga/Ginga.ttf');} \n" +
-      "@font-face {font-family: Hagin; src: url('../fonts/Hagin/HaginCapsMedium-Medium.otf');} \n" +
+      "@font-face {font-family: Squad; src: url('./fonts/Squad/Squad-Regular.otf');} \n" +
+      "@font-face {font-family: Baron; src: url('./fonts/Baron/BaronNeue-Regular.otf');} \n" +
+      "@font-face {font-family: Bukhari; src: url('./fonts/Bukhari/BukhariScript-Regular.otf');} \n" +
+      "@font-face {font-family: ColorTube; src: url('./fonts/ColorTube/ColorTube-Regular.otf');} \n" +
+      "@font-face {font-family: BloggerMediumItalic; src: url('./fonts/Blogger/Blogger Sans-Medium Italic.otf');} \n" +
+      "@font-face {font-family: BloggerBoldItalic; src: url('./fonts/Blogger/Blogger Sans-Bold Italic.otf');} \n" +
+      "@font-face {font-family: Phenomena; src: url('./fonts/Phenomena/Phenomena-Regular.otf');} \n" +
+      "@font-face {font-family: Manrope-Regular; src: url('./fonts/Manrope/manrope-regular.otf');} \n" +
+      "@font-face {font-family: Manrope-Bold; src: url('./fonts/Manrope/manrope-bold.otf');} \n" +
+      "@font-face {font-family: Ginga; src: url('./fonts/Ginga/Ginga.ttf');} \n" +
+      "@font-face {font-family: Hagin; src: url('./fonts/Hagin/HaginCapsMedium-Medium.otf');} \n" +
       "</style>";
   $("head").append(font_settings);
 
