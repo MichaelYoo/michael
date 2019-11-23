@@ -28,7 +28,6 @@ html{
   padding:0;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: hidden;
   background-color: #021633;
 }
 body{

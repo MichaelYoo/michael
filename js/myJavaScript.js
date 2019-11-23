@@ -3,10 +3,10 @@ $(document).ready(function(){
   // $("html").css("overflowY", "hidden");
   // var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   // var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
   $("html").css("scroll-behavior", "auto");
   //$(document).scrollTop(0);
   $("html,body").animate({scrollTop: 0}, 1);
+  $("html").css("overflowY", "hidden");
   var aboutMe = Snap("#aboutMe");
   var sinText = Snap("#sinText");
   var s = Snap("#continue_Button");
@@ -82,11 +82,9 @@ $(document).ready(function(){
   });
   navBannerText2.attr({
     fill:"#A92828",
-    fontSize:"8vw",
+    fontSize:"1.5vw",
     fontFamily:"Manrope-Regular",
     textAnchor:"middle",
-    transformOrigin: "50% 50%",
-    transform: "rotate(60deg)",
     opacity:0,
     pointerEvents: "none",
   });
@@ -391,13 +389,6 @@ $(document).ready(function(){
       navBannerText.animate({
         opacity:"1",
       }, 500);
-      setTimeout(function(){
-        navBannerText2.animate({
-          opacity:"1",
-          x:"5vw",
-          y:630,
-        }, 500);
-      }, 200);
       $(".blog").animate({
         opacity:1,
       }, 500);
