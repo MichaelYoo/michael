@@ -1,11 +1,14 @@
+window.onload = function() {
+  $("html").css("scroll-behavior", "auto");
+  $("html,body").animate({scrollTop: 0}, 1);
+  $("html").css("overflowY", "hidden");
+}
 $(document).ready(function(){
 
 
   // var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   // var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-  $("html").css("scroll-behavior", "auto");
-  $("html,body").animate({scrollTop: 0}, 1);
-  $("html").css("overflowY", "hidden");
+
   var aboutMe = Snap("#aboutMe");
   var sinText = Snap("#sinText");
   var s = Snap("#continue_Button");
@@ -747,29 +750,3 @@ $(document).ready(function(){
   });
 
 });
-
-
-// window.onload = function() {
-
-  //circle.click(clickFunc);
-
-  // var clickFunc = function () {
-  //   g.transform('');   // reset the animation, may not be needed
-  //   otherRect.transform('');
-  //   g.animate({ transform: 'r45,150,150' }, 1000, mina.bounce ) ;;
-  //   otherRect.animate({ transform: 'r360, 150,150' },2000, mina.bounce, endAnim );
-  // };
-  // circle.click(myClickFunc);
-  // var myClickFunc = function() {
-  //   circle.animate({
-  //     r: 150
-  //   }, 2000, mina.easein);
-  // }
-  // var clickFunc = function() {
-  //   window.scroll({
-  //     top: 1000,
-  //     left: 0,
-  //     behavior: 'smooth'
-  //   });
-  // }
-//}
