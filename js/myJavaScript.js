@@ -1,12 +1,11 @@
 $(document).ready(function(){
 
-  // $("html").css("overflowY", "hidden");
+
   // var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   // var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
   $("html").css("scroll-behavior", "auto");
-  window.scrollTo(0, 0);
-  //$("html,body").animate({scrollTop: 0}, 1);
-
+  $("html,body").animate({scrollTop: 0}, 1);
+  $("html").css("overflowY", "hidden");
   var aboutMe = Snap("#aboutMe");
   var sinText = Snap("#sinText");
   var s = Snap("#continue_Button");
