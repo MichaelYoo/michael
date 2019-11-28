@@ -388,11 +388,6 @@ $(document).ready(function(){
       navBannerText.animate({
         opacity:"1",
       }, 500);
-      setTimeout(function(){
-        navBannerText2.animate({
-          opacity:"1",
-        }, 500);
-      }, 200);
       $(".blog").animate({
         opacity:1,
       }, 500);
@@ -522,11 +517,6 @@ $(document).ready(function(){
       navBannerText.animate({
         opacity:"1",
       }, 500);
-      setTimeout(function(){
-        navBannerText2.animate({
-          opacity:"1",
-        }, 500);
-      }, 200);
       $(".blog").animate({
         opacity:1,
       }, 500);
