@@ -5,8 +5,8 @@ $(document).ready(function(){
   // var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
   $("html").css("scroll-behavior", "auto");
   $("html").css("overflowY", "auto");
-  //$(document).scrollTop(0);
-  $("html,body").animate({scrollTop: 0}, 1);
+  $(document).scrollTop(0);
+  //$("html,body").animate({scrollTop: 0}, 1);
   $("html").css("overflowY", "hidden");
   var aboutMe = Snap("#aboutMe");
   var sinText = Snap("#sinText");
