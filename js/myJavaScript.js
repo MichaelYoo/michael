@@ -32,7 +32,7 @@ $(document).ready(function(){
 
   var navBanner = navBar.rect(0, 0, "100%", "100%");
   var navBannerText = navBar.text("45%","20%","Moods.");
-  var navBannerText2 = navBar.text("7vw","65vh","wrath.");
+  var navBannerText2 = navBar.text("45%","30%","wrath.");
   var bannerRect = navBar.rect(0,"23%","60%","5px");
 
   var orangeBubble = orange.circle(10,10,100);
@@ -321,7 +321,6 @@ $(document).ready(function(){
       fill: "#A92828",
     });
     navBannerText2.attr({
-      fontSize:"8vw",
       text: "wrath.",
       fill: "#A92828",
     });
@@ -389,6 +388,11 @@ $(document).ready(function(){
       navBannerText.animate({
         opacity:"1",
       }, 500);
+      setTimeout(function(){
+        navBannerText2.animate({
+          opacity:"1",
+        }, 500);
+      }, 200);
       $(".blog").animate({
         opacity:1,
       }, 500);
@@ -441,8 +445,7 @@ $(document).ready(function(){
       fill: "#EF820D",
     });
     navBannerText2.attr({
-      fontSize:"6vw",
-      text: "Gluttony",
+      text: "gluttony.",
       fill: "#EF820D",
     });
     navBanner.attr({
@@ -522,8 +525,6 @@ $(document).ready(function(){
       setTimeout(function(){
         navBannerText2.animate({
           opacity:"1",
-          x:"5vw",
-          y:630,
         }, 500);
       }, 200);
       $(".blog").animate({
