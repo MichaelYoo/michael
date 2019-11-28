@@ -4,7 +4,7 @@ $(document).ready(function(){
   // var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   // var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
   $("html").css("scroll-behavior", "auto");
-  $(document).scrollTop(0);
+  window.scrollTo(0, 0);
   //$("html,body").animate({scrollTop: 0}, 1);
 
   var aboutMe = Snap("#aboutMe");
