@@ -4,10 +4,9 @@ $(document).ready(function(){
   // var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   // var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
   $("html").css("scroll-behavior", "auto");
-  $("html").css("overflowY", "auto");
   $(document).scrollTop(0);
   //$("html,body").animate({scrollTop: 0}, 1);
-  $("html").css("overflowY", "hidden");
+
   var aboutMe = Snap("#aboutMe");
   var sinText = Snap("#sinText");
   var s = Snap("#continue_Button");
