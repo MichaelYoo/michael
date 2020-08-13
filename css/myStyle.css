@@ -69,6 +69,13 @@ h1{
   animation-delay: 1.3s;
   z-index: 3;
 }
+.continueButton:hover {
+  height:2.85vw;
+  width:2.85vw;
+  margin-left: -1.425vw;
+
+  margin-top: -1.425vw;
+}
 .continueButton:active {
   height:2.7vw;
   width:2.7vw;
