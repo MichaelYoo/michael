@@ -85,7 +85,7 @@ h1{
   animation: pulse 0.7s infinite;
 }
 
-.red, .orange, .yellow, .green, .blue, .indigo, .violet{
+.cyan, .magenta, .yellow, .green, .blue, .indigo, .violet{
   height:3.5vw;
   width:3.5vw;
   margin:auto;
@@ -98,13 +98,13 @@ h1{
   opacity:0;
   z-index: 3;
 }
-/* , .orange:hover ~ .sinText, .yellow:hover ~ .sinText, .green:hover ~ .sinText, .blue:hover ~ .sinText, .indigo:hover ~ .sinText, .violet:hover ~ .sinText */
-.red:active, .orange:active, .yellow:active, .green:active, .blue:active, .indigo:active, .violet:active {
+/* , .magenta:hover ~ .sinText, .yellow:hover ~ .sinText, .green:hover ~ .sinText, .blue:hover ~ .sinText, .indigo:hover ~ .sinText, .violet:hover ~ .sinText */
+.cyan:active, .magenta:active, .yellow:active, .green:active, .blue:active, .indigo:active, .violet:active {
   height:3.2vw;
   width:3.2vw;
   margin: auto;
   margin-top: 0.15vw;
-  box-shadow: 0 0 0 rgb(0,0,0);
+  box-shadow: 255 255 255 rgb(255,255,255);
   animation: pulse2 0.7s infinite;
 }
 
@@ -253,7 +253,7 @@ h1{
   text-align: center;
   height:auto;
   width: -webkit-fill-available;
-  font-size: 3vw;
+  font-size: 4vw;
   -webkit-text-fill-color: #020429;
   padding-left: 20vw;
   padding-right: 20vw;
@@ -272,7 +272,6 @@ h1{
   background: linear-gradient(to right, #307AB4,#8030B4); /* Standard syntax (must be last) */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 4vw;
   z-index: 1;
   opacity:0;
 }

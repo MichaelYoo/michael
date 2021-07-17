@@ -9,13 +9,15 @@ $(document).ready(function(){
   var aboutMe = Snap("#aboutMe");
   var sinText = Snap("#sinText");
   var s = Snap("#continue_Button");
-  var red = Snap("#red");
-  var orange = Snap("#orange");
+  var cyan = Snap("#cyan");
+  var magenta = Snap("#magenta");
   var yellow = Snap("#yellow");
-  var green = Snap("#green");
-  var blue = Snap("#blue");
-  var indigo = Snap("#indigo");
-  var violet = Snap("#violet");
+
+  // var green = Snap("#green");
+  // var blue = Snap("#blue");
+  // var indigo = Snap("#indigo");
+  // var violet = Snap("#violet");
+
   var black = Snap("#black");
   var white = Snap("#white");
   var navBar = Snap("#navBar");
@@ -24,25 +26,27 @@ $(document).ready(function(){
   var circle = s.circle("50vmax", "50vmax", "200vmax");
 
   var sinTextBubble = sinText.rect(0,0,3000,"5vw");
-  var sinTextText = sinText.text("38.5%","68%","wrath.");
-  var redBubble = red.circle(10,10,100);
-  var redRect2 = s.rect("0%","-200%","200%","100%");
-  var redRect = s.rect("0%","60%","200%","100%");
+  var sinTextText = sinText.text("38.5%","68%","Journal.");
+  var cyanBubble = cyan.circle(10,10,100);
+  var cyanRect2 = s.rect("0%","200%","200%","100%");
+  var cyanRect = s.rect("0%","60%","200%","100%");
 
   var navBanner = navBar.rect(0, 0, "100%", "100%");
   var navBannerText = navBar.text("45%","20%","Moods.");
-  var navBannerText2 = navBar.text("45%","30%","wrath.");
+  var navBannerText2 = navBar.text("45%","30%","Journal.");
   var bannerRect = navBar.rect(0,"23%","60%","5px");
 
-  var orangeBubble = orange.circle(10,10,100);
-  var orangeRect2 = s.rect("100.7vw", "41%", "0.5vw", "0%");
-  var orangeRect = s.rect("100.7vw", "41%", "0.5vw", "0%");
+  var magentaBubble = magenta.circle(10,10,100);
+  var magentaRect2 = s.rect("100.7vw", "41%", "0.5vw", "0%");
+  var magentaRect = s.rect("100.7vw", "41%", "0.5vw", "0%");
 
   var yellowBubble = yellow.circle(10,10,100);
-  var greenBubble = green.circle(10,10,100);
-  var blueBubble = blue.circle(10,10,100);
-  var indigoBubble = indigo.circle(10,10,100);
-  var violetBubble = violet.circle(10,10,100);
+
+  // var greenBubble = green.circle(10,10,100);
+  // var blueBubble = blue.circle(10,10,100);
+  // var indigoBubble = indigo.circle(10,10,100);
+  // var violetBubble = violet.circle(10,10,100);
+
   var blackBubble = black.circle(10,10,100);
   var whiteBubble = white.circle(10,10,100);
   var aboutMeBubble = aboutMe.circle(10,10,100);
@@ -96,32 +100,32 @@ $(document).ready(function(){
     opacity: "1",
   }, 1500);
 
-  redBubble.attr({
+  cyanBubble.attr({
     fill: "#A92828",
     opacity: "1",
   });
-  redRect.attr({
+  cyanRect.attr({
     opacity: "0",
     transform: "rotate(60deg)",
     transformOrigin: "50% 50%",
     fill: "#FFA0A0",
   })
-  redRect2.attr({
+  cyanRect2.attr({
     opacity: "0",
     transform: "rotate(60deg)",
     transformOrigin: "50 50%",
     fill: "#FFDBDB",
   })
 
-  orangeBubble.attr({
+  magentaBubble.attr({
     fill: "#EF820D",
     opacity: "1",
   });
-  orangeRect.attr({
+  magentaRect.attr({
     fill: "#FFD8AE",
     opacity: "1",
   });
-  orangeRect2.attr({
+  magentaRect2.attr({
     fill: "#FFC282",
     opacity: "1",
   });
@@ -131,25 +135,25 @@ $(document).ready(function(){
     opacity: "1",
   });
 
-  greenBubble.attr({
-    fill: "#4C7632",
-    opacity: "1",
-  });
-
-  blueBubble.attr({
-    fill: "#4453A8",
-    opacity: "1",
-  });
-
-  indigoBubble.attr({
-    fill: "#614177",
-    opacity: "1",
-  });
-
-  violetBubble.attr({
-    fill: "#C1439E",
-    opacity: "1",
-  });
+  // greenBubble.attr({
+  //   fill: "#4C7632",
+  //   opacity: "1",
+  // });
+  //
+  // blueBubble.attr({
+  //   fill: "#4453A8",
+  //   opacity: "1",
+  // });
+  //
+  // indigoBubble.attr({
+  //   fill: "#614177",
+  //   opacity: "1",
+  // });
+  //
+  // violetBubble.attr({
+  //   fill: "#C1439E",
+  //   opacity: "1",
+  // });
 
   blackBubble.attr({
     fill: "#020429",
@@ -190,65 +194,65 @@ $(document).ready(function(){
   $("head").append(font_settings);
 
   var cubicBezier = function(x1, y1, x2, y2, epsilon){
-  	var curveX = function(t){
-  		var v = 1 - t;
-  		return 3 * v * v * t * x1 + 3 * v * t * t * x2 + t * t * t;
-  	};
-  	var curveY = function(t){
-  		var v = 1 - t;
-  		return 3 * v * v * t * y1 + 3 * v * t * t * y2 + t * t * t;
-  	};
-  	var derivativeCurveX = function(t){
-  		var v = 1 - t;
-  		return 3 * (2 * (t - 1) * t + v * v) * x1 + 3 * (- t * t * t + 2 * v * t) * x2;
-  	};
-  	return function(t){
+    var curveX = function(t){
+      var v = 1 - t;
+      return 3 * v * v * t * x1 + 3 * v * t * t * x2 + t * t * t;
+    };
+    var curveY = function(t){
+      var v = 1 - t;
+      return 3 * v * v * t * y1 + 3 * v * t * t * y2 + t * t * t;
+    };
+    var derivativeCurveX = function(t){
+      var v = 1 - t;
+      return 3 * (2 * (t - 1) * t + v * v) * x1 + 3 * (- t * t * t + 2 * v * t) * x2;
+    };
+    return function(t){
 
-  		var x = t, t0, t1, t2, x2, d2, i;
+      var x = t, t0, t1, t2, x2, d2, i;
 
-  		// First try a few iterations of Newton's method -- normally very fast.
-  		for (t2 = x, i = 0; i < 8; i++){
-  			x2 = curveX(t2) - x;
-  			if (Math.abs(x2) < epsilon) return curveY(t2);
-  			d2 = derivativeCurveX(t2);
-  			if (Math.abs(d2) < 1e-6) break;
-  			t2 = t2 - x2 / d2;
-  		}
+      // First try a few iterations of Newton's method -- normally very fast.
+      for (t2 = x, i = 0; i < 8; i++){
+        x2 = curveX(t2) - x;
+        if (Math.abs(x2) < epsilon) return curveY(t2);
+        d2 = derivativeCurveX(t2);
+        if (Math.abs(d2) < 1e-6) break;
+        t2 = t2 - x2 / d2;
+      }
 
-  		t0 = 0, t1 = 1, t2 = x;
+      t0 = 0, t1 = 1, t2 = x;
 
-  		if (t2 < t0) return curveY(t0);
-  		if (t2 > t1) return curveY(t1);
+      if (t2 < t0) return curveY(t0);
+      if (t2 > t1) return curveY(t1);
 
-  		// Fallback to the bisection method for reliability.
-  		while (t0 < t1){
-  			x2 = curveX(t2);
-  			if (Math.abs(x2 - x) < epsilon) return curveY(t2);
-  			if (x > x2) t0 = t2;
-  			else t1 = t2;
-  			t2 = (t1 - t0) * .5 + t0;
-  		}
+      // Fallback to the bisection method for reliability.
+      while (t0 < t1){
+        x2 = curveX(t2);
+        if (Math.abs(x2 - x) < epsilon) return curveY(t2);
+        if (x > x2) t0 = t2;
+        else t1 = t2;
+        t2 = (t1 - t0) * .5 + t0;
+      }
 
-  		// Failure
-  		return curveY(t2);
+      // Failure
+      return curveY(t2);
 
-  	};
+    };
 
   };
 // box-shadow:0 0 0 1600px rgba(0,0,0,0.65);
-  var epsilon_redRect1 = (1000 / 60 / 600) / 4;
-  var epsilon_redRect2 = (1000 / 60 / 800) / 4;
-  var easein_Circ_redRect1 = cubicBezier(0.55, 0.055, 0.675, 0.19, epsilon_redRect1);
-  var easein_Circ_redRect2 = cubicBezier(0.55, 0.055, 0.675, 0.19, epsilon_redRect2);
+  var epsilon_cyanRect1 = (1000 / 60 / 600) / 4;
+  var epsilon_cyanRect2 = (1000 / 60 / 800) / 4;
+  var easein_Circ_cyanRect1 = cubicBezier(0.55, 0.055, 0.675, 0.19, epsilon_cyanRect1);
+  var easein_Circ_cyanRect2 = cubicBezier(0.55, 0.055, 0.675, 0.19, epsilon_cyanRect2);
 
-  var epsilon_orangeRectGrow = (1000 / 60 / 1000) / 4;
-  var epsilon_orangeRect2_1 = (1000 / 60 / 600) / 4;
-  var epsilon_orangeRect1 = (1000 / 60 / 300) / 4;
-  var epsilon_orangeRect2_2 = (1000 / 60 / 300) / 4;
-  var easeout_Cubic_orangeRect1 = cubicBezier(0.215, 0.61, 0.355, 1, epsilon_orangeRect1);
-  var easeout_Cubic_orangeRectGrow = cubicBezier(0.215, 0.61, 0.355, 1, epsilon_orangeRectGrow);
-  var easeout_Cubic_orangeRect2_1 = cubicBezier(0.215, 0.61, 0.355, 1, epsilon_orangeRect2_1);
-  var easein_Quint_orangeRect2_2 = cubicBezier(0.55, 0.055, 0.675, 0.19, epsilon_orangeRect2_2);
+  var epsilon_magentaRectGrow = (1000 / 60 / 1000) / 4;
+  var epsilon_magentaRect2_1 = (1000 / 60 / 600) / 4;
+  var epsilon_magentaRect1 = (1000 / 60 / 300) / 4;
+  var epsilon_magentaRect2_2 = (1000 / 60 / 300) / 4;
+  var easeout_Cubic_magentaRect1 = cubicBezier(0.215, 0.61, 0.355, 1, epsilon_magentaRect1);
+  var easeout_Cubic_magentaRectGrow = cubicBezier(0.215, 0.61, 0.355, 1, epsilon_magentaRectGrow);
+  var easeout_Cubic_magentaRect2_1 = cubicBezier(0.215, 0.61, 0.355, 1, epsilon_magentaRect2_1);
+  var easein_Quint_magentaRect2_2 = cubicBezier(0.55, 0.055, 0.675, 0.19, epsilon_magentaRect2_2);
 
 
 
@@ -281,13 +285,13 @@ $(document).ready(function(){
       opacity:0,
     }, 650);
   });
-  redBubble.hover(function(){
+  cyanBubble.hover(function(){
     // $("#sinText").animate({
     //   boxShadow: "0 0 0 1000px rgba(0,0,0,0.65)",
     // }, 150);
     sinTextText.attr({
       fill:"#FFFFFF",
-      text:"wrath.",
+      text:"journal.",
       x:"39.3%",
     });
     sinTextText.animate({
@@ -311,16 +315,16 @@ $(document).ready(function(){
     }, 300);
 
   });
-  redBubble.click(function(){
-    s.append(redRect2);
-    s.append(redRect);
+  cyanBubble.click(function(){
+    s.append(cyanRect2);
+    s.append(cyanRect);
 
-    $(".blogTitle").html("Wrath.");
+    $(".blogTitle").html("Journal.");
     navBannerText.attr({
       fill: "#A92828",
     });
     navBannerText2.attr({
-      text: "wrath.",
+      text: "journal.",
       fill: "#A92828",
     });
     navBanner.attr({
@@ -331,19 +335,19 @@ $(document).ready(function(){
     });
 
 
-    redRect.attr({
+    cyanRect.attr({
       opacity:"1",
     });
-    redRect2.attr({
+    cyanRect2.attr({
       opacity:"1",
     });
-    redRect.animate({
+    cyanRect.animate({
       y:"-15%",
-    }, 400, easein_Circ_redRect1);
+    }, 400, easein_Circ_cyanRect1);
     setTimeout(function(){
-      redRect2.animate({
+      cyanRect2.animate({
         y:"-110%",
-      }, 600, easein_Circ_redRect2);
+      }, 600, easein_Circ_cyanRect2);
     }, 100);
     setTimeout(function(){
       $("html").css("background-color", "#FFDBDB");
@@ -395,11 +399,11 @@ $(document).ready(function(){
       circle.attr({
         fill:"#FFDBDB",
       });
-      redRect.attr({
+      cyanRect.attr({
         opacity:"0",
         y: "60%",
       });
-      redRect2.attr({
+      cyanRect2.attr({
         opacity:"0",
         y: "-270%",
       });
@@ -407,7 +411,7 @@ $(document).ready(function(){
   });
 
 
-  orangeBubble.hover(function(){
+  magentaBubble.hover(function(){
     sinTextText.attr({
       fill:"#FFFFFF",
       text:"gluttony.",
@@ -433,7 +437,7 @@ $(document).ready(function(){
 
 
 
-  orangeBubble.click(function(){
+  magentaBubble.click(function(){
     $(".blogTitle").html("Gluttony.");
     navBannerText.attr({
       fill: "#EF820D",
@@ -449,34 +453,34 @@ $(document).ready(function(){
       fill:"#EF820D",
     });
 
-    orangeRect.animate({
+    magentaRect.animate({
       height:"100%",
       y:0,
-    }, 500, easeout_Cubic_orangeRectGrow);
-    orangeRect2.animate({
+    }, 500, easeout_Cubic_magentaRectGrow);
+    magentaRect2.animate({
       height:"100%",
       y:0,
-    }, 500, easeout_Cubic_orangeRectGrow);
+    }, 500, easeout_Cubic_magentaRectGrow);
     setTimeout(function(){
-      orangeRect.animate({
+      magentaRect.animate({
         width:"45vw",
         x:"78.45vw",
-      }, 300, easeout_Cubic_orangeRect1);
+      }, 300, easeout_Cubic_magentaRect1);
     }, 500);
     setTimeout(function(){
-      orangeRect2.animate({
+      magentaRect2.animate({
         width:"100vw",
         x:"50.95vw",
-      }, 600, easeout_Cubic_orangeRect2_1)
+      }, 600, easeout_Cubic_magentaRect2_1)
     }, 800);
     setTimeout(function(){
       $("html").css("background-color", "#FFC282");
     }, 1300);
     setTimeout(function(){
-      orangeRect.animate({
+      magentaRect.animate({
         width:"100vw",
         x:"50.95vw",
-      }, 300, easein_Quint_orangeRect2_2);
+      }, 300, easein_Quint_magentaRect2_2);
     }, 1300);
     setTimeout(function(){
       $("html").css("background-color", "#FFD8AE");
@@ -521,13 +525,13 @@ $(document).ready(function(){
       }, 500);
     }, 2550);
     setTimeout(function(){
-      orangeRect2.attr({
+      magentaRect2.attr({
           x: "100.7vw",
           y: "41%",
           width: "0.5vw",
           height: "0%",
       });
-      orangeRect.attr({
+      magentaRect.attr({
           x: "100.7vw",
           y: "41%",
           width: "0.5vw",
@@ -563,98 +567,103 @@ $(document).ready(function(){
       opacity:0,
     }, 300);
   });
-  greenBubble.hover(function(){
-    sinTextText.attr({
-      fill:"#FFFFFF",
-      text:"envy.",
-      x:"71.7%",
-    });
-    sinTextText.animate({
-      opacity:1,
-    }, 300);
-    sinTextBubble.animate({
-      fill:"#4C7632",
-      opacity:1,
-    }, 300);
-    // this.paper.append(this);
-  }, function(){
-    sinTextText.animate({
-      opacity:0,
-    }, 300);
-    sinTextBubble.animate({
-      opacity:0,
-    }, 300);
-  });
-  blueBubble.hover(function(){
-    sinTextText.attr({
-      fill:"#FFFFFF",
-      text:"sloth.",
-      x:"59%",
-    });
-    sinTextText.animate({
-      opacity:1,
-    }, 300);
-    sinTextBubble.animate({
-      fill:"#4453A8",
-      opacity:1,
-    }, 300);
-    // this.paper.append(this);
-  }, function(){
-    sinTextText.animate({
-      opacity:0,
-    }, 300);
-    sinTextBubble.animate({
-      opacity:0,
-    }, 300);
-  });
-  indigoBubble.hover(function(){
-    sinTextText.attr({
-      fill:"#FFFFFF",
-      text:"pride.",
-      x:"46.1%",
-    });
-    sinTextText.animate({
-      opacity:1,
-    }, 300);
-    sinTextBubble.animate({
-      fill:"#614177",
-      opacity:1,
-    }, 300);
-    // this.paper.append(this);
-  }, function(){
-    sinTextText.animate({
-      opacity:0,
-    }, 300);
-    sinTextBubble.animate({
-      opacity:0,
-    }, 300);
-  });
-  violetBubble.hover(function(){
-    sinTextText.attr({
-      fill:"#FFFFFF",
-      text:"lust.",
-      x:"32.9%",
-    });
-    sinTextText.animate({
-      opacity:1,
-    }, 300);
-    sinTextBubble.animate({
-      fill:"#C1439E",
-      opacity:1,
-    }, 300);
-    // this.paper.append(this);
-  }, function(){
-    sinTextText.animate({
-      opacity:0,
-    }, 300);
-    sinTextBubble.animate({
-      opacity:0,
-    }, 300);
-  });
+
+  // greenBubble.hover(function(){
+  //   sinTextText.attr({
+  //     fill:"#FFFFFF",
+  //     text:"envy.",
+  //     x:"71.7%",
+  //   });
+  //   sinTextText.animate({
+  //     opacity:1,
+  //   }, 300);
+  //   sinTextBubble.animate({
+  //     fill:"#4C7632",
+  //     opacity:1,
+  //   }, 300);
+  //   // this.paper.append(this);
+  // }, function(){
+  //   sinTextText.animate({
+  //     opacity:0,
+  //   }, 300);
+  //   sinTextBubble.animate({
+  //     opacity:0,
+  //   }, 300);
+  // });
+
+  // blueBubble.hover(function(){
+  //   sinTextText.attr({
+  //     fill:"#FFFFFF",
+  //     text:"sloth.",
+  //     x:"59%",
+  //   });
+  //   sinTextText.animate({
+  //     opacity:1,
+  //   }, 300);
+  //   sinTextBubble.animate({
+  //     fill:"#4453A8",
+  //     opacity:1,
+  //   }, 300);
+  //   // this.paper.append(this);
+  // }, function(){
+  //   sinTextText.animate({
+  //     opacity:0,
+  //   }, 300);
+  //   sinTextBubble.animate({
+  //     opacity:0,
+  //   }, 300);
+  // });
+
+  // indigoBubble.hover(function(){
+  //   sinTextText.attr({
+  //     fill:"#FFFFFF",
+  //     text:"pride.",
+  //     x:"46.1%",
+  //   });
+  //   sinTextText.animate({
+  //     opacity:1,
+  //   }, 300);
+  //   sinTextBubble.animate({
+  //     fill:"#614177",
+  //     opacity:1,
+  //   }, 300);
+  //   // this.paper.append(this);
+  // }, function(){
+  //   sinTextText.animate({
+  //     opacity:0,
+  //   }, 300);
+  //   sinTextBubble.animate({
+  //     opacity:0,
+  //   }, 300);
+  // });
+
+  // violetBubble.hover(function(){
+  //   sinTextText.attr({
+  //     fill:"#FFFFFF",
+  //     text:"lust.",
+  //     x:"32.9%",
+  //   });
+  //   sinTextText.animate({
+  //     opacity:1,
+  //   }, 300);
+  //   sinTextBubble.animate({
+  //     fill:"#C1439E",
+  //     opacity:1,
+  //   }, 300);
+  //   // this.paper.append(this);
+  // }, function(){
+  //   sinTextText.animate({
+  //     opacity:0,
+  //   }, 300);
+  //   sinTextBubble.animate({
+  //     opacity:0,
+  //   }, 300);
+  // });
+
   blackBubble.hover(function(){
     sinTextText.attr({
       fill:"#FFFFFF",
-      text:"anxiety.",
+      text:"archive.",
       x:"39.3%",
     });
     sinTextText.animate({
@@ -675,7 +684,7 @@ $(document).ready(function(){
   });
   aboutMeBubble.hover(function(){
     sinTextText.attr({
-      text:"About Me. / Archive.",
+      text:"About Me.",
       fill:"#FFFFFF",
       x:"52.6%",
     });
